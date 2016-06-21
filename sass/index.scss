@@ -1,2 +1,94 @@
 @import "variable";
 @import "mixin";
+html {
+	font-size: 20px !important;
+	height: 100%;
+}
+body {
+	margin: 0;
+	height: 100%;
+}
+
+main {
+	height: 100%;
+}
+
+#get-drink {
+	height: 100%;
+	background-image: url("../imgs/p2/bg.png");
+	background-size: contain;
+	header {
+		.logo {
+			position: absolute;
+			top: 0.5rem;
+			left: 0.5rem;
+			width: 3.4rem;
+		}
+		.rule {
+			position: absolute;
+			top: 0.5rem;
+			right: 0.5rem;
+			width: 2.95rem;
+		}
+	}
+	.drink-machine {
+		@include centerAbsoluteDiv();
+		width: 17.5rem;
+		height: 21rem;
+		background-image: url("../imgs/p3/machine.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100% auto;
+		.switch {
+			@include hCenterAbsoluteDiv();
+			width: 3.45rem;
+			top: 4.7rem;
+		}
+		.title {
+			@include hCenterAbsoluteDiv();
+			top: -3.2rem;
+			width: 11.875rem;
+		}
+		.water-sound {
+			position: absolute;
+			width: 5.35rem;
+			top: 8.4rem;
+			right: 2.5rem;
+		}
+		.water {
+			position: absolute;
+			width: 4.05rem;
+			top: 11.66rem;
+			right: 6.8rem;
+		}
+		.water-drop {
+			position: absolute;
+			width: 2.2rem;
+			top: 10.5rem;
+			right: 7.6rem;
+		}
+		.water-flow {
+			position: absolute;
+			top: 9.6rem;
+			right: 8.6rem;
+			height: 2.525rem;
+		}
+	}
+	.machine-tips {
+		position: absolute;
+		width: 7.65rem;
+		bottom: 2rem;
+		right: 2rem;
+	}
+	.doraemon {
+		position: absolute;
+		width: 6.575rem;
+		bottom: 0;
+		left: 2rem;
+	}
+	.license {
+		@include hCenterAbsoluteDiv();
+		bottom: 0.5rem;
+		width: 9.075rem;
+	}
+}
