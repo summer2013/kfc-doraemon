@@ -10,13 +10,54 @@
 		<meta http-equiv="cleartype" content="on">
 		<meta name="apple-mobile-web-app-capable" content="yes"/>
 		<link rel="stylesheet" href="css/index.css"/>
+		<link rel="stylesheet" href="http://cdn.bootcss.com/Swiper/3.3.1/css/swiper.min.css">
 	</head>
 	<body>
 		<main>
 			<!--   首页 -->
-			<section></section>
+			<section id="home">
+				<header>
+					<img class="logo" src="imgs/p1/logo.png">
+					<img class="rule" src="imgs/p1/rule.png">
+				</header>
+				<section class="cups">
+					<img class="title" src="imgs/p1/title.png">
+					<img class="cup1" src="imgs/p1/cup1.png">
+					<img class="cup2" src="imgs/p1/cup2.png">
+					<img class="cup3" src="imgs/p1/cup3.png">
+					<img class="cup4" src="imgs/p1/cup4.png">
+					<img class="doraemon" src="imgs/p1/doraemon.png">
+				</section>
+				<img class="btn-treat-me" src="imgs/p1/treat-me.png">
+				<img class="bell" src="imgs/p1/bell.png">
+				<img class="license" src="imgs/p1/license.png">
+			</section>
 			<!-- 点击‘请我请我’进入游戏页面选一只杯子 -->
-			<section></section>
+			<section id="choice-cup">
+				<header>
+					<img class="logo" src="imgs/p1/logo.png">
+					<img class="rule" src="imgs/p1/rule.png">
+				</header>
+				<section class="cups">
+					<img class="title" src="imgs/p2/title.png">
+					<img class="cup1" src="imgs/p2/cup1.png">
+					<img class="cup1-face" src="imgs/p2/face1.png">
+					<img class="cup2" src="imgs/p2/cup2.png">
+					<img class="cup2-face" src="imgs/p2/face2.png">
+					<img class="cup3" src="imgs/p2/cup3.png">
+					<img class="cup3-face" src="imgs/p2/face3.png">
+					<img class="cup4" src="imgs/p2/cup4.png">
+					<img class="cup4-face" src="imgs/p2/face4.png">
+				</section>
+				<section class="operation">
+					<img class="tips" src="imgs/p2/tips.png" alt="">
+					<img class="s-red-bg" src="imgs/p2/red-line.png" alt="">
+					<img class="s-blue-bg" src="imgs/p2/blue-line.png" alt="">
+					<input class="btn-get-drink" type="button" disabled>
+					<img class="doraemon" src="imgs/p2/doraemon.png" alt="">
+				</section>
+				<img class="license" src="imgs/p1/license.png">
+			</section>
 			<!--   按住杯子，将杯子接满  -->
 			<section id="get-drink">
 				<header>
@@ -28,20 +69,85 @@
 					<img class="title" src="imgs/p1/title.png">
 					<img class="water-flow" src="imgs/p3/water-flow.png">
 					<img class="water-drop" src="imgs/p3/water-drop.png">
-					<img class="water" src="imgs/p3/water.png">
+					<img class="water-water" src="imgs/p3/water.png">
 					<img class="water-sound" src="imgs/p3/water-sound.png">
 				</section>
-				<img class="doraemon" src="imgs/p3/doraemon.png">
-				<img class="machine-tips" src="imgs/p3/tips.png">
+				<section class="operation">
+					<img class="doraemon" src="imgs/p3/doraemon.png">
+					<img class="machine-tips" src="imgs/p3/tips.png">
+				</section>
 				<img class="license" src="imgs/p1/license.png">
 			</section>
-			<!--   领取续杯券 -->
-			<section></section>
+			<!--   领取续杯券（保存到卡包） -->
+			<section id="save-coupon">
+				<img class="mask" src="" alt="">
+				<section class="operation">
+					<img class="btn-save" src="imgs/p4/btn-save.png">
+				</section>
+			</section>
+			<!--   已经领取过 -->
+			<section id="got-coupon">
+				<img class="mask" src="" alt="">
+				<img class="desc" src="imgs/p5/text-get-already.png" alt="">
+				<section class="operation">
+					<img class="btn-know" src="imgs/p5/btn-know.png">
+				</section>
+			</section>
+			<!--   券被领光了 -->
+			<section id="coupon-run-out">
+				<img class="mask" src="" alt="">
+				<img class="desc" src="imgs/p5/run-out.png" alt="">
+				<section class="operation">
+					<img class="btn-know" src="imgs/p5/btn-know.png">
+				</section>
+			</section>
+			<!--  成功获得券（炫耀一下） -->
+			<section id="get-coupon-success">
+				<header>
+					<img class="logo" src="imgs/p1/logo.png">
+					<img class="rule" src="imgs/p1/rule.png">
+				</header>
+				<img class="desc" src="imgs/p6/desc.png" alt="">
+				<section class="operation">
+					<img class="btn-show-off" src="imgs/p6/btn-show-off.png">
+					<img class="bell" src="imgs/p6/bell.png">
+				</section>
+				<img class="license" src="imgs/p1/license.png">
+			</section>
+			<!--  好友“我也要参加” -->
+			<section id="participate">
+				<header>
+					<img class="logo" src="imgs/p1/logo.png">
+					<img class="rule" src="imgs/p1/rule.png">
+				</header>
+				<img class="title" src="imgs/p8/title.png" alt="">
+				<img class="desc" src="imgs/p8/desc.png" alt="">
+				<section class="operation">
+					<img class="btn-participate" src="imgs/p8/btn-participate.png">
+					<img class="bell" src="imgs/p8/bell.png">
+				</section>
+				<img class="license" src="imgs/p1/license.png">
+			</section>
+			<!--活动规则-->
+			<section id="activity-rules">
+				<img class="mask" src="" alt="">
+				<section class="content">
+					<img class="title" src="imgs/p1/title.png" alt="">
+					<img class="zi-rule" src="imgs/p9/zi-rule.png" alt="">
+					<img class="btn-close" src="imgs/p9/btn-close.png" alt="">
+					<p class="desc">测试文字</p>
+				</section>
+			</section>
 			<!-- 分享页面,2秒后跳转另一个‘点我领券’页面   -->
-			<section></section>
+			<section id="share">
+			    <img class="mask" src="" alt="">
+				<img class="doraemon" src="imgs/p7/doraemon.png" alt="">
+				<img class="desc" src="imgs/p7/desc.png" alt="">
+			</section>
 		</main>
 		<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
 		<script src="js/index.js"></script>
+		<script src="http://cdn.bootcss.com/Swiper/3.3.1/js/swiper.min.js"></script>
 	</body>
 </html>
 

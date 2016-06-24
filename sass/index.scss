@@ -1,5 +1,7 @@
 @import "variable";
 @import "mixin";
+@import "animation";
+
 html {
 	font-size: 20px !important;
 	height: 100%;
@@ -11,26 +13,236 @@ body {
 
 main {
 	height: 100%;
+	>section {
+		header {
+			.logo {
+				position: absolute;
+				top: 0.5rem;
+				left: 0.5rem;
+				width: 3.4rem;
+				z-index: 10;
+			}
+			.rule {
+				position: absolute;
+				top: 0.5rem;
+				right: 0.5rem;
+				width: 2.95rem;
+			}
+		}
+	}
+	.mask {
+		position: absolute;
+		opacity: 0.9;
+        filter: alpha(opacity=90);
+		-khtml-opacity: 0.9;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: #52697c;
+	}
+	.license {
+		@include hCenterAbsoluteDiv();
+		bottom: 0.5rem;
+		width: 9.075rem;
+		z-index: 10;
+	}
 }
 
-#get-drink {
+#home {
+	/*display: none;*/
+	height: 100%;
+	background-image: url("../imgs/p1/bg.jpg");
+	background-size: contain;
+	.cups {
+		@include centerAbsoluteDiv();
+		width: 16rem;
+		height: 21rem;
+		.title {
+			@include hCenterAbsoluteDiv();
+			top: -3.2rem;
+			width: 11.875rem;
+		}
+		.cup1, .cup2, .cup3, .cup4 {
+			animation: home-cup 3s 1s infinite ease-in-out;
+			-webkit-animation: home-cup 3s 1s infinite ease-in-out;
+		}
+		.cup1 {
+			position: absolute;
+			top: 5rem;
+			left: 1rem;
+			width: 3.325rem;
+		}
+		.cup2 {
+			position: absolute;
+			top: 5rem;
+			right: 1rem;
+			width: 3.9rem;
+		}
+		.cup3 {
+			position: absolute;
+			bottom: 7rem;
+			left: 0.2rem;
+			width: 4.575rem;
+		}
+		.cup4 {
+			position: absolute;
+			bottom: 6rem;
+			right: -0.7rem;
+			width: 5.15rem;
+		}
+		.doraemon {
+			@include centerAbsoluteDiv();
+			width: 10.15rem;
+			animation: home-doraemon 3s 1s infinite ease-in-out;
+			-webkit-animation: home-doraemon 3s 1s infinite ease-in-out;
+		}
+	}
+	.bell {
+		@include hCenterAbsoluteDiv();
+		position: absolute;
+		bottom: 2rem;
+		width: 2.175rem;
+	}
+	.btn-treat-me {
+		@include hCenterAbsoluteDiv();
+		position: absolute;
+		bottom: 3rem;
+		width: 8.225rem;
+	}
+}
+#choice-cup {
+	display: none;
 	height: 100%;
 	background-image: url("../imgs/p2/bg.png");
 	background-size: contain;
-	header {
-		.logo {
+	.cups {
+		@include centerAbsoluteDiv();
+		/*width: 17.5rem;*/
+		width: 16rem;
+		height: 21rem;
+		.title {
 			position: absolute;
-			top: 0.5rem;
-			left: 0.5rem;
-			width: 3.4rem;
+			left: 50%;
+			top: -2.2rem;
+			width: 7.65rem;
 		}
-		.rule {
+		.cup1 {
 			position: absolute;
-			top: 0.5rem;
-			right: 0.5rem;
-			width: 2.95rem;
+			width: 6.425rem;
+			left: 1.5rem;
+			top: -1rem;
+		}
+		.cup1-face {
+			display: none;
+			position: absolute;
+			width: 6.35rem;
+			left: 1.5rem;
+			top: -1rem;
+		}
+		.cup2 {
+			position: absolute;
+			width: 6.625rem;
+			top: 2rem;
+			right: 1.5rem;
+		}
+		.cup2-face {
+			display: none;
+			position: absolute;
+			width: 6.425rem;
+			top: 2rem;
+			right: 1.5rem;
+		}
+		.cup3 {
+			position: absolute;
+			width: 6.625rem;
+			top: 6rem;
+			left: 1.5rem;
+		}
+		.cup3-face {
+			display: none;
+			position: absolute;
+			width: 6.625rem;
+			top: 6rem;
+			left: 1.5rem;
+		}
+		.cup4 {
+			position: absolute;
+			width: 6.625rem;
+			top: 9rem;
+			right: 1.5rem;
+		}
+		.cup4-face {
+			display: none;
+			position: absolute;
+			width: 6.625rem;
+			top: 9rem;
+			right: 1.5rem;
 		}
 	}
+	.operation {
+		@include hCenterAbsoluteDiv();
+		bottom: 0;
+		/*width: 18.75rem;*/
+		width: 20.7rem; //?
+		height: 13rem;
+		.tips {
+			position: absolute;
+			bottom: 7.7rem;
+			left: 3em;
+			width: 7.775rem;
+			animation-name: home-cup; // ??
+			animation-duration: 3s;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+			-webkit-animation-name: home-cup;
+			-webkit-animation-duration: 3s;
+			-webkit-animation-delay: 1s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: ease-in-out;
+		}
+		.s-red-bg {
+			position: absolute;
+			z-index: 1;
+			bottom: 1rem;
+			/*width: 18.75rem;*/
+			width: 20.7rem; //?
+		}
+		.s-blue-bg {
+			position: absolute;
+			z-index: 3;
+			bottom: 0;
+			/*width: 18.75rem;*/
+			width: 20.7rem; //?
+		}
+		.btn-get-drink {
+			@include hCenterAbsoluteDiv();
+			height: 3.3rem;
+			background-image: url('../imgs/p2/get-a-cup.png');
+			background-size: cover;
+			background-color: #00aeef;
+			border: none;
+			bottom: 1.5rem;
+			width: 8.25rem;
+			z-index: 4;
+		}
+		.doraemon {
+			position: absolute;
+			z-index: 2;
+			bottom: 2.9rem;
+			width: 6.35rem;
+			left: 50%;
+		}
+	}
+}
+
+#get-drink {
+	display: none;
+	height: 100%;
+	background-image: url("../imgs/p2/bg.png");
+	background-size: contain;
 	.drink-machine {
 		@include centerAbsoluteDiv();
 		width: 17.5rem;
@@ -39,31 +251,34 @@ main {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 100% auto;
-		.switch {
-			@include hCenterAbsoluteDiv();
-			width: 3.45rem;
-			top: 4.7rem;
-		}
 		.title {
 			@include hCenterAbsoluteDiv();
 			top: -3.2rem;
 			width: 11.875rem;
 		}
+		.switch {
+			@include hCenterAbsoluteDiv();
+			width: 3.45rem;
+			top: 4.7rem;
+		}
 		.water-sound {
 			position: absolute;
 			width: 5.35rem;
+			transform: scale(0);
 			top: 8.4rem;
 			right: 2.5rem;
 		}
-		.water {
+		.water-water {
 			position: absolute;
 			width: 4.05rem;
+			transform: scale(0);
 			top: 11.66rem;
 			right: 6.8rem;
 		}
 		.water-drop {
 			position: absolute;
 			width: 2.2rem;
+			transform: scale(0);
 			top: 10.5rem;
 			right: 7.6rem;
 		}
@@ -71,24 +286,207 @@ main {
 			position: absolute;
 			top: 9.6rem;
 			right: 8.6rem;
-			height: 2.525rem;
+			height: 0;
 		}
 	}
-	.machine-tips {
-		position: absolute;
-		width: 7.65rem;
-		bottom: 2rem;
-		right: 2rem;
+	.operation {
+		@include hCenterAbsoluteDiv();
+		bottom: 0;
+		/*width: 18.75rem;*/
+		width: 20.7rem; //?
+		height: 8rem;
+		.machine-tips {
+			position: absolute;
+			width: 7.65rem;
+			bottom: 2rem;
+			right: 3rem;
+		}
+		.doraemon {
+			position: absolute;
+			width: 6.575rem;
+			bottom: 0;
+			left: 3rem;
+		}
+	}
+}
+
+#save-coupon {
+	display: none;
+	height: 100%;
+	.operation {
+		@include centerAbsoluteDiv();
+		background-image: url("../imgs/p4/bg.png");
+		background-size: contain;
+		width: 17rem;
+		height: 20.8rem;
+		.btn-save {
+			@include hCenterAbsoluteDiv();
+			bottom: -0.5rem;
+			width: 8.25rem;
+		}
+	}
+}
+
+#got-coupon {
+	display: none;
+	height: 100%;
+	.desc {
+		@include centerAbsoluteDiv();
+		width: 12.175rem;
+		z-index: 1;
+	}
+	.operation {
+		@include centerAbsoluteDiv();
+		background-image: url("../imgs/p5/bg.png");
+		background-size: contain;
+		width: 15.925rem;
+		height: 21.725rem;
+		.btn-know {
+			@include hCenterAbsoluteDiv();
+			bottom: -0.5rem;
+			width: 8.25rem;
+		}
+	}
+}
+
+#coupon-run-out {
+	display: none;
+	height: 100%;
+	.desc {
+		@include centerAbsoluteDiv();
+		width: 8.225rem;
+		z-index: 1;
+	}
+	.operation {
+		@include centerAbsoluteDiv();
+		background-image: url("../imgs/p5/bg.png");
+		background-size: contain;
+		width: 15.925rem;
+		height: 21.725rem;
+		.btn-know {
+			@include hCenterAbsoluteDiv();
+			bottom: -0.5rem;
+			width: 8.25rem;
+		}
+	}
+}
+
+#get-coupon-success {
+	display: none;
+	height: 100%;
+	background-image: url("../imgs/p6/bg.jpg");
+
+	background-size: contain;
+	.desc {
+		@include centerAbsoluteDiv();
+		width: 13.95rem;
+		transform: translate(-50%,-100%);
+	}
+	.operation {
+		@include centerAbsoluteDiv();
+		transform: translate(-50%, 50%);
+		width: 10rem;
+		height: 3rem;
+		.btn-show-off {
+			@include hCenterAbsoluteDiv();
+			width: 8.125rem;
+			bottom: -0.5rem;
+		}
+		.bell {
+			@include hCenterAbsoluteDiv();
+			bottom: -0.5rem;
+			width: 1.75rem;
+		}
+	}
+}
+
+#participate {
+	display:none;
+	height: 100%;
+	background-image: url("../imgs/p6/bg.jpg");
+	background-size: contain;
+	.title {
+		@include hCenterAbsoluteDiv();
+		top: 2rem;
+		width: 9.825rem;
+	}
+	.desc {
+		@include centerAbsoluteDiv();
+		width: 9.95rem;
+		transform: translate(-50%,-100%);
+	}
+	.operation {
+		@include centerAbsoluteDiv();
+		transform: translate(-50%, 50%);
+		width: 10rem;
+		height: 3rem;
+		.btn-participate {
+			@include hCenterAbsoluteDiv();
+			width: 8.125rem;
+			bottom: -0.5rem;
+		}
+		.bell {
+			@include hCenterAbsoluteDiv();
+			bottom: -0.5rem;
+			width: 1.75rem;
+		}
+	}
+}
+
+#share {
+	display: none;
+	.mask{
+		background-color:#262626;
+	}
+	.desc {
+		@include centerAbsoluteDiv();
+		width: 14.55rem;
 	}
 	.doraemon {
 		position: absolute;
-		width: 6.575rem;
-		bottom: 0;
-		left: 2rem;
-	}
-	.license {
-		@include hCenterAbsoluteDiv();
-		bottom: 0.5rem;
-		width: 9.075rem;
+		top: 1rem;
+		right: 1rem;
+		width: 3.65rem;
+		animation: home-cup 2s 1s infinite ease-in-out;
+		-webkit-animation: home-cup 3s 1s infinite ease-in-out;
 	}
 }
+
+#activity-rules {
+	display: none;
+	.content {
+		@include centerAbsoluteDiv();
+		width: 15.25rem;
+		height: 25.325rem;
+		/*width: 17.25rem;*/ //??
+		/*height: 25.325rem;*/
+		background-image: url('../imgs/p9/bg.png');
+		background-size: 100% 100%;
+		.desc {
+			@include centerAbsoluteDiv();
+			/*border: 1px solid black;*/
+			width: 14rem;
+			height: 16rem;
+			overflow-y: scroll; // not working
+		}
+		.title {
+			@include hCenterAbsoluteDiv();
+			/*top: 0;*/
+			/*width: 11.875rem;*/
+			top: -1.5rem;
+			width: 8.875rem;
+		}
+		.zi-rule {
+			position: absolute;
+			right: 3.2rem;
+			top: 3rem;
+			width: 3.725rem;
+		}
+		.btn-close {
+			@include hCenterAbsoluteDiv();
+			bottom: -0.6rem;
+			width: 8.125rem;
+		}
+	}
+}
+

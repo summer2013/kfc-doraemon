@@ -1,0 +1,130 @@
+@keyframes show-water-flow {
+	from {
+		height: 0;
+	}
+	to {
+		height: 2.525rem;
+	}
+}
+@-webkit-keyframes show-water-flow {
+	from {
+		height: 0;
+	}
+	to {
+		height: 2.525rem;
+	}
+}
+
+@keyframes water-sound {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(0.8);
+	}
+}
+
+@-webkit-keyframes water-sound {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(0.8);
+	}
+}
+
+@keyframes water-drop {
+	from {
+		transform: scale(1) translateY(0);
+	}
+	to {
+		transform: scale(0.8) translateY(0.2rem);
+	}
+}
+@-webkit-keyframes water-drop {
+	from {
+		transform: scale(1) translateY(0);
+	}
+	to {
+		transform: scale(0.8) translateY(0.2rem);
+	}
+}
+
+@keyframes show-water {
+	from {
+		transform: scale(0) translateY(0.1rem);
+	}
+	to {
+		transform: scale(1) translateY(0);
+	}
+}
+
+@-webkit-keyframes show-water {
+	from {
+		transform: scale(0) translateY(0.1rem);
+	}
+	to {
+		transform: scale(1) translateY(0);
+	}
+}
+
+@keyframes home-cup {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(0.2rem);
+	}
+}
+
+@-webkit-keyframes home-cup {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(0.2rem);
+	}
+}
+
+@keyframes home-doraemon {
+	0%, 100% {
+		transform: translate(-50%, -50%) translateY(0);
+	}
+	50% {
+		transform: translate(-50%, -50%) translateY(0.5rem);
+	}
+}
+
+@-webkit-keyframes home-doraemon {
+	0%, 100% {
+		transform: translate(-50%, -50%) translateY(0);
+	}
+	50% {
+		transform: translate(-50%, -50%) translateY(0.5rem);
+	}
+}
+
+@keyframes bell-shake {
+	0%, 50%, 100%{
+		transform: translateX(-50%) rotate(0);
+	}
+	25% {
+		transform: translateX(-50%) rotate(35deg);
+	}
+	75% {
+		transform: translateX(-50%) rotate(-35deg);
+	}
+}
+
+@-webkit-keyframes bell-shake {
+	0%, 50%, 100%{
+		transform: translateX(-50%) rotate(0);
+	}
+	25% {
+		transform: translateX(-50%) rotate(35deg);
+	}
+	75% {
+		transform: translateX(-50%) rotate(-35deg);
+	}
+}
+
