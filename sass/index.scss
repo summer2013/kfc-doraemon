@@ -33,13 +33,13 @@ main {
 	.mask {
 		position: absolute;
 		opacity: 0.9;
-        filter: alpha(opacity=90);
-		-khtml-opacity: 0.9;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
 		width: 100%;
+		height: 100%;
+		/*z-index: 20;*/
 		background-color: #52697c;
 	}
 	.license {
